@@ -12,44 +12,52 @@ body {
 	z-index: 1;
 }
 
-.ryu-container, .ryu {
+.ryu_ready, .ryu_throwing, .ryu_cool {
+	display: none;
+}
+
+.ryu_still {
+	display: block;
+}
+
+.ryu_container, .ryu_figure {
 	float: left;
 }
 
-.ryu-still, .ryu-ready, .ryu-throwing, .ryu-cool {
+.ryu_still, .ryu_ready, .ryu_throwing, .ryu_cool {
 	height: 494px;
 	width: 659px;
 }
 
-.ryu-ready {
+.ryu_ready {
 	background-image: url('../images/ryu-ready-position.gif');
 }
 
-.ryu-still {
+.ryu_still {
 	background-image: url('../images/ryu-standing-still.png');
 }
 
-.ryu-throwing {
+.ryu_throwing {
 	background-image: url('../images/ryu-throwing-hadouken.png');
 }
 
-.ryu-cool {
+.ryu_cool {
 	background-image: url('../images/ryu-cool.gif');
 }
 
 .hadouken {
 	background-image: url('../images/hadouken.gif');
-	width: 156px; 
 	height: 90px;
+	width: 156px; 
 	/*display: none;*/
 	position: absolute;
 	z-index: 10;
-	top: 0px;
+	top: 200px;
 	left: 0px;
 	float: left;
 }
 
-.hadouken, .ryu-cool, .ryu-ready, .ryu-still, .ryu-throwing {
+.hadouken, .ryu_cool, .ryu_ready, .ryu_still, .ryu_throwing {
     background-repeat: no-repeat;
 }
 
@@ -61,10 +69,15 @@ body {
 	padding-top: 75px;
 }
 
+.content div {
+	display: none;
+}
+
 .sf-logo {
 	background-image: url('../images/street-fighter-logo.png');
 	width: 682px;
-	height: 314px;
+	height: 300px;
+	outline: 1px solid red;
 }
 
 .jquery-logo {
