@@ -1,16 +1,24 @@
 $(document).ready(function(){
+     $('.sf-logo').show ("slow", function(){
+        $('.sf-logo').fadeIn ("9500");
+            $(this).fadeOut ("5000");
+        $('.sf-logo').hide ();
+        $('.brought-by').show ();
+        $('.brought-by').fadeIn ("9500");
+        $('.brought-by').fadeOut ("5000");
+        $('.brought-by').hide ();
+    })
+
+
     $('.ryu_figure').mouseenter(function(){
         $('.ryu_still').hide();
         $('.ryu_ready').show();
-        console.log($('.ryu_ready'));
     })
     .mouseleave(function() {
         $('.ryu_still').show();
         $('.ryu_ready').hide();
     })
-
-    .mousedown(function(event){
-      console.log(event);
+    .mousedown(function(){
         playHadouken();
         $('.ryu_ready').hide();
         $('.ryu_throwing').show();
@@ -27,8 +35,14 @@ $(document).ready(function(){
         $('.ryu_ready').show();
     });
     $('body').keydown(function(event){
-      var test = event.keyCode;
-      if (test == 88) {console.log(test);}
+      if (event.keyCode == 88) {
+        $('.ryu_still').hide();
+        $('.ryu_cool').show();
+      }
+    })
+    .keyup(function(){
+        $('.ryu_cool').hide();
+        $('ryu_still').show();
     })
 });
 
