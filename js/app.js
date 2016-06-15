@@ -1,14 +1,15 @@
 $(document).ready(function(){
-     $('.sf-logo').show ("slow", function(){
-        $('.sf-logo').fadeIn ("9500");
-            $(this).fadeOut ("5000");
-        $('.sf-logo').hide ();
-        $('.brought-by').show ();
-        $('.brought-by').fadeIn ("9500");
-        $('.brought-by').fadeOut ("5000");
-        $('.brought-by').hide ();
-    })
-
+    $('.sf-logo').show ("slow", function(){
+        $('.sf-logo').fadeIn ("9500", function(){
+         $(this).fadeOut ("5000", function(){
+            $('.sf-logo').hide();
+                $('.brought-by').show();
+                    $('.brought-by').fadeIn ("9500", function(){
+                    $(this).fadeOut ("5000", function(){
+                        $('.brought-by').hide();
+                });
+            });
+    });  
 
     $('.ryu_figure').mouseenter(function(){
         $('.ryu_still').hide();
@@ -42,7 +43,8 @@ $(document).ready(function(){
     })
     .keyup(function(){
         $('.ryu_cool').hide();
-        $('ryu_still').show();
+        $('.ryu_ready').show();
+        $('.ryu_still').show();
     })
 });
 
