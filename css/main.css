@@ -69,44 +69,18 @@ body {
 	padding-top: 75px;
 }
 
-.content div {
-	display: none;
-}
-
 .sf-logo {
 	background-image: url('../images/street-fighter-logo.jpg');
 	width: 682px;
 	height: 340px;
 }
 
-.jquery-logo {
-	background-image: url('../images/jquery-logo.jpg');
-	width: 500px;
-	height: 300px;
-	margin-top: 50px;
-	margin-left: auto;
-	margin-right: auto;
-}
 
-.brought-by {
-	text-align: center;
-	margin-top: 100px;
-}
-
-.how-to p {
-	width: 50%;
-	color: black;
+.how-to {
+	padding-top: 200px;
+	width: 75%;
+	color: red;
 	font-size: 24px;
 	line-height: 45px;
 }
 
-.how-to p + p {
-	margin-left: 275px;
-}
-
-.brought-by, .how-to {
-    color: red;
-    font-family: comical;
-    font-size: 50px;
-    width: 600px;
-}
